@@ -2,7 +2,6 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiClock, FiInfo } from "react-icons/fi";
 import { Map, Marker, TileLayer } from "react-leaflet";
-import { useHistory } from 'react-router-dom';
 import L from 'leaflet';
 
 import mapMarkerImg from '../../assets/images/Local-Marker.svg';
