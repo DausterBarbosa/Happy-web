@@ -1,7 +1,6 @@
 import React from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
-import { useHistory } from "react-router-dom";
 
 import { FiPlus } from "react-icons/fi";
 
