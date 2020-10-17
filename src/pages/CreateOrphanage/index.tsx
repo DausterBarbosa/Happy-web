@@ -32,15 +32,13 @@ export default function CreateOrphanage() {
             <legend>Dados</legend>
 
             <Map 
-              center={[-27.2092052,-49.6401092]} 
+              center={[-3.5591598,-41.1185378]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
             >
-              <TileLayer 
-                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
-              />
+              <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
 
-              <Marker interactive={false} icon={happyMapIcon} position={[-27.2092052,-49.6401092]} />
+              <Marker interactive={false} icon={happyMapIcon} position={[-3.5591598,-41.1185378]} />
             </Map>
 
             <div className="input-block">
