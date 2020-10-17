@@ -20,8 +20,6 @@ const happyMapIcon = L.icon({
 })
 
 export default function Orphanage() {
-  const { goBack } = useHistory();
-
   return (
     <div id="page-orphanage">
       <SideBar/>
