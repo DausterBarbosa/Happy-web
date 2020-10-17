@@ -14,7 +14,7 @@ function Routes(){
                 <Route path="/" exact component={Landing}/>
                 <Route path="/app" component={MapLocalization}/>
                 <Route path="/orphanage" component={Orphanage}/>
-                <Route path="/create-orphanage" component={CreateOrphanage}/>
+                <Route path="/orphanage/create" component={CreateOrphanage}/>
             </Switch>
         </BrowserRouter>
     );
