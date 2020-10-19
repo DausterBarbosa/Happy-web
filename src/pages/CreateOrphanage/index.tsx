@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import L, { LeafletMouseEvent } from 'leaflet';
 
+import Api from "../../services/api";
+
 import { FiPlus } from "react-icons/fi";
 
 import mapMarkerImg from '../../assets/images/Local-Marker.svg';
@@ -57,17 +59,26 @@ export default function CreateOrphanage() {
     setSelectPreviewImage(selectedImagesPreview);
   }
 
-  function handleSubmit(e:React.FormEvent<HTMLFormElement>){
+  async function handleSubmit(e:React.FormEvent<HTMLFormElement>){
     e.preventDefault();
 
-    console.log({
-      position,
-      name,
-      about,
-      instructions,
-      opening_hours,
-      open_in_weekends
+    const data = new FormData();
+
+    data.append("name", name);
+    data.append("about",about);
+    data.append("latitude", String(position.latitude));
+    data.append("longitude", String(position.longitude));
+    data.append("instructions", instructions);
+    data.append("opening_hours", opening_hours);
+    data.append("open_in_weekends", String(open_in_weekends));
+    
+    images.forEach(image => {
+      data.append("images", image);
     });
+
+    await Api.post("/orphanages", data);
+
+    alert("Cadastro realizado com sucesso!");
   }
 
   return (
