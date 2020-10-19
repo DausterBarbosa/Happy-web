@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet';
-import L from 'leaflet';
+import L, { LeafletMouseEvent } from 'leaflet';
 
 import { FiPlus } from "react-icons/fi";
 
@@ -19,6 +19,17 @@ const happyMapIcon = L.icon({
 })
 
 export default function CreateOrphanage() {
+  const [position, setPosition] = useState({latitude: 0, longitude: 0});
+
+  function handleMapClick(event:LeafletMouseEvent){
+    const {latlng} = event;
+    
+    setPosition({
+      latitude: latlng.lat,
+      longitude: latlng.lng
+    });
+  }
+
   return (
     <div id="page-create-orphanage">
       <SideBar/>
@@ -32,10 +43,13 @@ export default function CreateOrphanage() {
               center={[-3.5591598,-41.1185378]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
+              onclick={handleMapClick}
             >
               <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
 
-              <Marker interactive={false} icon={happyMapIcon} position={[-3.5591598,-41.1185378]} />
+              {position.latitude !== 0 && (
+                <Marker interactive={false} icon={happyMapIcon} position={[position.latitude, position.longitude]} />
+              )}
             </Map>
 
             <div className="input-block">
