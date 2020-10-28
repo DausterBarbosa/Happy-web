@@ -5,7 +5,7 @@
 # Sobre
 <p>
 Happy é uma plataforma que permite encontrar os orfanatos mais próximos, nesta versão WEB o usuário poderá buscar em um mapa interativo
-orfanatos na região além de pode cadastrar orfanatos na plataforma. (Conheça também o <a href="https://github.com/DausterBarbosa/Happy-server" target="_blank">BACKEND</a> desta aplicação e sua versão <a href="https://github.com/DausterBarbosa/Happy-mobile" target="_blank">MOBILE</a>)
+orfanatos na região além de pode cadastrar orfanatos na plataforma. (Conheça também o <a href="https://github.com/DausterBarbosa/Happy-server" >BACKEND</a> desta aplicação e sua versão <a href="https://github.com/DausterBarbosa/Happy-mobile">MOBILE</a>)
 </p>
 
 # Tecnologias
@@ -20,7 +20,7 @@ Essas foram as pincipais tecnologias usadas no desenvolvimento do Happy web.
 # Demonstração
 ![Happy](.github/ezgif-1-46e7c9b21070.gif)
 
-<p>Demonstração do upload de multiplas imagens para aplicação e posteriormente para o <a href="https://github.com/DausterBarbosa/Happy-server" target="_blank">BACKEND</a></p>
+<p>Demonstração do upload de multiplas imagens para aplicação e posteriormente para o <a href="https://github.com/DausterBarbosa/Happy-server">BACKEND</a></p>
   
 ![Happy](.github/ezgif-1-62637faf59fa.gif)
 
